@@ -14,7 +14,7 @@ import java.util.List;
 public class Main {
     public static void main (String[] arg){
         Connection connection = Conector.getConnection();
-        Cliente cliente = new Cliente("1450","Carlos Perez","Cochabamba","Av. Ayacucho s/n",4245213);
+        //Cliente cliente = new Cliente("1450","Carlos Perez","Cochabamba","Av. Ayacucho s/n",4245213);
         Cliente laura = new Cliente("1451","Carlos Perez","Cochabamba","Av. Ayacucho s/n",4334567);
         Cliente roberto = new Cliente("1452","Roberto Claros","Cochabamba","Calle Junin s/n",4657676);
         Cliente lorena = new Cliente("1453","Lorena Peredo","Cochabamba","Av. Heroinas s/n",42452138);
@@ -64,7 +64,7 @@ public class Main {
         Coche coche3 = new Coche("48PR21","Renault","2022","Azul",16000,maria);
         Coche coche4 = new Coche("89MB91","Suzuki","2019","Celeste",19000,luis);
         Coche coche5 = new Coche("94ER12","Ferrari","2019","Amarillo",191000,carmen);
-        Coche coche6 = new Coche("30CM12","BMW","2021","Negro",25000,cliente);
+        //Coche coche6 = new Coche("30CM12","BMW","2021","Negro",25000,cliente);
         Coche coche7 = new Coche("40LM98","Nissan","2022","Plomo",16000,lorena);
 
         //Aniadir coche
@@ -80,11 +80,12 @@ public class Main {
         cocheDao.addCoche (coche7);
         */
         //Update
+        /*
         Coche cocheNuevo = new Coche("94OD12","Lexus","2021","Negro",60000,luis) ;
         cocheDao.updateCoche(cocheNuevo);
         Coche cocheNuevo1 = new Coche("40LM98","Quantum","2021","Plomo fugaz",15500,carmen);
         cocheDao.updateCoche(cocheNuevo1);
-
+        */
         //Delete
         /*
         cocheDao.deleteCoche("74LB51");
@@ -107,41 +108,48 @@ public class Main {
 
         Revision r1 = new Revision("98452","Purflux","2 delanteros","Vtech",coche1);
         Revision r2 = new Revision("46123","Coopers","2 traseros","Valvoline",coche3);
-        Revision r3 = new Revision("89789","MecaFilter","2 delanteros","Shell",coche6);
+        //Revision r3 = new Revision("89789","MecaFilter","2 delanteros","Shell",coche6);
         Revision r4 = new Revision("81122","Mahle","2 traseros","Brava",coche5);
         Revision r5 = new Revision("31216","Purflux","2 delanteros","Mobil",coche7);
         Revision r6 = new Revision("61564","Coopers","2 traseros","Pennzoil",coche2);
         RevisionDao revisionDao = new RevisionDao();
         /*
         Aniadir
-        revisionDao.addRevision(r1);
+
         revisionDao.addRevision(r2);
         revisionDao.addRevision(r3);
         revisionDao.addRevision(r4);
         revisionDao.addRevision(r5);
         revisionDao.addRevision(r6);
          */
+        revisionDao.addRevision(r4);
+        revisionDao.addRevision(r5);
+        revisionDao.addRevision(r6);
 
         /*
         //Delete
         revisionDao.deleteRevision("31216");
         revisionDao.deleteRevision("61564");
         revisionDao.deleteRevision("81122");
-         */
+        */
+
+
 
         //Update
+        /*
         Revision revisionNueva = new Revision("89789","Mahle","2 traseros","Brava",coche0);
         revisionDao.updateRevision(revisionNueva);
         Revision revisionNueva1 = new Revision("98452", "Filtro de aire","Pennzoil", "4 llantas", coche5);
         revisionDao.updateRevision(revisionNueva1);
+
         //READ
+         */
         /*
         List<Revision> revisiones = revisionDao.getAllRevisiones();
         for (int i = 0 ; i<revisiones.size();i++) {
             Revision revision = revisiones.get(i);
             System.out.println(revision);
         }
-
-         */
+        */
     }
 }
